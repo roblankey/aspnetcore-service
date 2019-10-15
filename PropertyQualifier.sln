@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E27FF0BF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQualifier.IntegrationTests", "tests\PropertyQualifier.IntegrationTests\PropertyQualifier.IntegrationTests.csproj", "{175AF848-961E-412F-9B38-41FD51BC7C0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQualifier.UnitTests", "tests\PropertyQualifier.UnitTests\PropertyQualifier.UnitTests.csproj", "{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,9 +50,22 @@ Global
 		{175AF848-961E-412F-9B38-41FD51BC7C0B}.Release|x64.Build.0 = Release|Any CPU
 		{175AF848-961E-412F-9B38-41FD51BC7C0B}.Release|x86.ActiveCfg = Release|Any CPU
 		{175AF848-961E-412F-9B38-41FD51BC7C0B}.Release|x86.Build.0 = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|x64.Build.0 = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|x64.ActiveCfg = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|x64.Build.0 = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CB4E5B45-E1AB-40D4-BB3A-A1CEBCAA7FB4} = {025A5C7C-64E3-466A-9452-9466E3C31F46}
 		{175AF848-961E-412F-9B38-41FD51BC7C0B} = {E27FF0BF-5117-4C89-A89A-7038CA687288}
+		{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A} = {E27FF0BF-5117-4C89-A89A-7038CA687288}
 	EndGlobalSection
 EndGlobal
