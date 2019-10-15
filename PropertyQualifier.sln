@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQualifier", "src\Pr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E27FF0BF-5117-4C89-A89A-7038CA687288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQualifier.UnitTests", "tests\PropertyQualifier.UnitTests\PropertyQualifier.UnitTests.csproj", "{175AF848-961E-412F-9B38-41FD51BC7C0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyQualifier.IntegrationTests", "tests\PropertyQualifier.IntegrationTests\PropertyQualifier.IntegrationTests.csproj", "{175AF848-961E-412F-9B38-41FD51BC7C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

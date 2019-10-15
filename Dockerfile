@@ -46,4 +46,5 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS api
 WORKDIR /app
 COPY --from=publish /app/src/PropertyQualifier/publish ./
 
+HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit
 ENTRYPOINT ["dotnet", "PropertyQualifier.dll"]
