@@ -1,10 +1,13 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.AspNetCore.Hosting;
-using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.TestHost;
+using Newtonsoft.Json.Linq;
+using Serilog;
 
-namespace PropertyQualifier.UnitTests
+namespace PropertyQualifier.IntegrationTests
 {
     public class TestFixture : IDisposable
     {
@@ -15,8 +18,9 @@ namespace PropertyQualifier.UnitTests
         {
             Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Test");
             Server = new TestServer(new WebHostBuilder()
-                .UseStartup<TestStartup>()
-                .UseEnvironment("Test"));
+                .UseStartup<Startup>()
+                .UseEnvironment("Test")
+                .UseSerilog());
             Client = Server.CreateClient();
         }
 
@@ -29,7 +33,13 @@ namespace PropertyQualifier.UnitTests
         public static T DeserializeResponse<T>(HttpResponseMessage response)
         {
             var json = response.Content.ReadAsStringAsync().Result;
-            return JObject.Parse(json)["data"].ToObject<T>();
+            return JObject.Parse(json).ToObject<T>();
+        }
+        
+        public static List<T> DeserializeResponseList<T>(HttpResponseMessage response)
+        {
+            var json = response.Content.ReadAsStringAsync().Result;
+            return JArray.Parse(json).ToObject<List<T>>();
         }
 
         public T GetService<T>()

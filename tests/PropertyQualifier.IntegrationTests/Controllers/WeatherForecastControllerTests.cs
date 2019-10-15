@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace PropertyQualifier.UnitTests.Controllers
+namespace PropertyQualifier.IntegrationTests.Controllers
 {
     [Collection("Test Collection")]
     public class WeatherForecastControllerTests
@@ -18,11 +20,13 @@ namespace PropertyQualifier.UnitTests.Controllers
         [Fact]
         public async Task Can_Get_WeatherForecast()
         {
-            var response = await _client.GetAsync("/health");
+            var response = await _client.GetAsync("/weatherforecast");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             
-            var actual = TestFixture.DeserializeResponse<string>(response);
+            var actual = TestFixture.DeserializeResponseList<WeatherForecast>(response);
             Assert.NotNull(actual);
+            Assert.NotEmpty(actual);
+            Assert.Equal(5, actual.Count);
         }
     }
 }

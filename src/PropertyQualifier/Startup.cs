@@ -16,7 +16,7 @@ namespace PropertyQualifier
                 .AddCheck<BasicHealthCheck>("basic_health_check");;
         }
 
-        public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

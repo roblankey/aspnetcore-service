@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace PropertyQualifier.UnitTests
+namespace PropertyQualifier.IntegrationTests
 {
     [CollectionDefinition("Test Collection", DisableParallelization = true)]
     public class TestCollection : ICollectionFixture<TestFixture>
