@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace PropertyQualifier.UnitTests.Models
+namespace DotNetCore30.UnitTests.Models
 {
     public class WeatherForecastTests
     {

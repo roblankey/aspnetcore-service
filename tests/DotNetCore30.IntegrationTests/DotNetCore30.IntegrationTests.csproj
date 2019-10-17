@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\PropertyQualifier\PropertyQualifier.csproj" />
+    <ProjectReference Include="..\..\src\DotNetCore30\DotNetCore30.csproj" />
   </ItemGroup>
 
 </Project>

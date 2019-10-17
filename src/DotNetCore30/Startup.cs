@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PropertyQualifier.HealthChecks;
+using DotNetCore30.HealthChecks;
 using Serilog;
 
-namespace PropertyQualifier
+namespace DotNetCore30
 {
     public class Startup
     {

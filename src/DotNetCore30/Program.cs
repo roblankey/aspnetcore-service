@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace PropertyQualifier
+namespace DotNetCore30
 {
     [ExcludeFromCodeCoverage]
     public static class Program

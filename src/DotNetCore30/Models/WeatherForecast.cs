@@ -1,6 +1,6 @@
 using System;
 
-namespace PropertyQualifier
+namespace DotNetCore30
 {
     public class WeatherForecast
     {
