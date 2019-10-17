@@ -25,7 +25,24 @@ RUN cd DotNetCore30.IntegrationTests && \
 dotnet test && \
 cd ..
 
-FROM test AS publish
+FROM test AS version
+WORKDIR /code/src/DotNetCore30
+
+# install dotnet 2.1 for the version tool
+RUN dotnet tool install -g dotnet-version-cli && \
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg && \
+mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/ && \
+wget -q https://packages.microsoft.com/config/debian/9/prod.list && \
+mv prod.list /etc/apt/sources.list.d/microsoft-prod.list && \
+apt-get update && \
+apt-get install -y dotnet-sdk-2.1
+
+# version the project
+ARG VERSION
+RUN export PATH="$PATH:/root/.dotnet/tools" && \
+dotnet version -s $VERSION
+
+FROM version AS publish
 WORKDIR /code/src/DotNetCore30
 
 # publish
