@@ -52,5 +52,5 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS api
 WORKDIR /app
 COPY --from=publish /code/src/DotNetCore30/publish ./
 
-HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit
+HEALTHCHECK CMD curl --fail http://localhost/health || exit
 ENTRYPOINT ["dotnet", "DotNetCore30.dll"]
