@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace DotNetCore30.UnitTests.Models
+namespace AspNetCore.UnitTests.Models
 {
     public class WeatherForecastTests
     {

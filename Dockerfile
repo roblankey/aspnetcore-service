@@ -3,30 +3,30 @@ WORKDIR /code
 
 # restore
 COPY *.sln .
-COPY src/DotNetCore30/*.csproj ./src/DotNetCore30/
-COPY tests/DotNetCore30.IntegrationTests/*.csproj ./tests/DotNetCore30.IntegrationTests/
-COPY tests/DotNetCore30.UnitTests/*.csproj ./tests/DotNetCore30.UnitTests/
+COPY src/AspNetCore/*.csproj ./src/AspNetCore/
+COPY tests/AspNetCore.IntegrationTests/*.csproj ./tests/AspNetCore.IntegrationTests/
+COPY tests/AspNetCore.UnitTests/*.csproj ./tests/AspNetCore.UnitTests/
 RUN dotnet restore
 
 # build
-COPY src/DotNetCore30/* ./src/DotNetCore30/
-COPY tests/DotNetCore30.IntegrationTests/* ./tests/DotNetCore30.IntegrationTests/
-COPY tests/DotNetCore30.UnitTests/* ./tests/DotNetCore30.UnitTests/
+COPY src/AspNetCore/* ./src/AspNetCore/
+COPY tests/AspNetCore.IntegrationTests/* ./tests/AspNetCore.IntegrationTests/
+COPY tests/AspNetCore.UnitTests/* ./tests/AspNetCore.UnitTests/
 RUN dotnet build
 
 FROM build AS test
 WORKDIR /code/tests
 
-RUN cd DotNetCore30.UnitTests && \
+RUN cd AspNetCore.UnitTests && \
 dotnet test && \
 cd ..
 
-RUN cd DotNetCore30.IntegrationTests && \
+RUN cd AspNetCore.IntegrationTests && \
 dotnet test && \
 cd ..
 
 FROM test AS version
-WORKDIR /code/src/DotNetCore30
+WORKDIR /code/src/AspNetCore
 
 # install dotnet 2.1 for the version tool
 RUN dotnet tool install -g dotnet-version-cli && \
@@ -43,14 +43,14 @@ RUN export PATH="$PATH:/root/.dotnet/tools" && \
 dotnet version -s $VERSION
 
 FROM version AS publish
-WORKDIR /code/src/DotNetCore30
+WORKDIR /code/src/AspNetCore
 
 # publish
 RUN dotnet publish -c Release -o publish
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS api
 WORKDIR /app
-COPY --from=publish /code/src/DotNetCore30/publish ./
+COPY --from=publish /code/src/AspNetCore/publish ./
 
 HEALTHCHECK CMD curl --fail http://localhost/health || exit
-ENTRYPOINT ["dotnet", "DotNetCore30.dll"]
+ENTRYPOINT ["dotnet", "AspNetCore.dll"]

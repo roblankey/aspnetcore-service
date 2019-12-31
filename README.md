@@ -1,4 +1,4 @@
-# .Net Core 3.0 Example
+# ASP.Net Core example
 > Generic project description...
 
 ## Development setup
@@ -18,10 +18,10 @@ Since the application is .NET Core, it can easily be built, tested, and ran usin
 Both Unit and Integration tests are supported and expected. Tests are written using *Xunit*. Integration tests utilize *Microsoft.AspNetCore.TestHost*. Running tests is as easy as using the CLI to target which test project you would like to execute.
 
 #### Unit
-> `dotnet test .\tests\DotNetCore30.UnitTests`
+> `dotnet test .\tests\AspNetCore.UnitTests`
 
 #### Integration
-> `dotnet test .\tests\DotNetCore30.IntegrationTests`
+> `dotnet test .\tests\AspNetCore.IntegrationTests`
 
 ### Running
 Running the application through the CLI is as simple as executing the run command. This will launch the application on the default port at http://localhost:5000

@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DotNetCore30": {
+    "AspNetCore": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "health",

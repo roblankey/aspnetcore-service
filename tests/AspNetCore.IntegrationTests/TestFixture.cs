@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json.Linq;
 using Serilog;
 
-namespace DotNetCore30.IntegrationTests
+namespace AspNetCore.IntegrationTests
 {
     public class TestFixture : IDisposable
     {

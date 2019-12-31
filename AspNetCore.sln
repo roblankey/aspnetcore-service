@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{025A5C7C-64E3-466A-9452-9466E3C31F46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore30", "src\DotNetCore30\DotNetCore30.csproj", "{CB4E5B45-E1AB-40D4-BB3A-A1CEBCAA7FB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore", "src\AspNetCore\AspNetCore.csproj", "{CB4E5B45-E1AB-40D4-BB3A-A1CEBCAA7FB4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E27FF0BF-5117-4C89-A89A-7038CA687288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore30.IntegrationTests", "tests\DotNetCore30.IntegrationTests\DotNetCore30.IntegrationTests.csproj", "{175AF848-961E-412F-9B38-41FD51BC7C0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.IntegrationTests", "tests\AspNetCore.IntegrationTests\AspNetCore.IntegrationTests.csproj", "{175AF848-961E-412F-9B38-41FD51BC7C0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore30.UnitTests", "tests\DotNetCore30.UnitTests\DotNetCore30.UnitTests.csproj", "{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.UnitTests", "tests\AspNetCore.UnitTests\AspNetCore.UnitTests.csproj", "{6919C831-D9B2-4B2C-89EB-9B55C0DD7E1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

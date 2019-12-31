@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using DotNetCore30.HealthChecks;
+using AspNetCore.HealthChecks;
 using Serilog;
 
-namespace DotNetCore30
+namespace AspNetCore
 {
     public class Startup
     {

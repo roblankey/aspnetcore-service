@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace DotNetCore30.IntegrationTests.Controllers
+namespace AspNetCore.IntegrationTests.Controllers
 {
     [Collection("Test Collection")]
     public class WeatherForecastControllerTests

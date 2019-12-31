@@ -1,6 +1,6 @@
 using System;
 
-namespace DotNetCore30
+namespace AspNetCore
 {
     public class WeatherForecast
     {

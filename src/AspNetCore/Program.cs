@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace DotNetCore30
+namespace AspNetCore
 {
     [ExcludeFromCodeCoverage]
     public static class Program
